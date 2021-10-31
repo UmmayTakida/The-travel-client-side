@@ -10,7 +10,7 @@ const PlaceOrder = () => {
     const { id } = useParams()
     const { user } = useAuth();
     const [detailsService, setServiceDetails] = useState([]);
-    // const [singleService, setSingleService] = useState({});
+
 
     useEffect(() => {
         const url = `https://serene-lowlands-88457.herokuapp.com/services/${id}`
@@ -19,18 +19,12 @@ const PlaceOrder = () => {
             .then(data => setServiceDetails(data))
 
     }, [])
-    // // setServiceDetails(data.myorders)
-    // useEffect(() => {
-    //     const singleServiceFound = detailsService.find((sr) => sr?._id === id);
-    //     setSingleService(singleServiceFound);
-    //     console.log(setSingleService)
 
-    // }, [detailsService])
     const onSubmit = data => {
         console.log(data)
 
 
-        fetch('http://localhost:5000/myorders', {
+        fetch('https://serene-lowlands-88457.herokuapp.com/myorders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

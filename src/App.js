@@ -8,6 +8,9 @@ import Login from './Pages/Login/Login/Login';
 import AddnewService from './Pages/AddNewService/AddnewService';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import Notfound from './Pages/NotFound/Notfound';
+import Footer from './Pages/Footer/Footer';
+import Myorder from './Pages/MyOrder/Myorder';
 
 function App() {
   return (
@@ -36,8 +39,16 @@ function App() {
             <PrivateRoute path="/placeorder/:id">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
+            <PrivateRoute path="/myorders">
+              <Myorder></Myorder>
+            </PrivateRoute>
+
+            <Route path="*">
+              <Notfound></Notfound>
+            </Route>
 
           </Switch>
+          <Footer></Footer>
 
         </Router>
       </AuthProvider>

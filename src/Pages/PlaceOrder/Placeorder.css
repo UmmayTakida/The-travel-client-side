@@ -1,0 +1,11 @@
+.place-order h2{
+    text-align: center;
+
+}
+ .place-order input,textarea{
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid mediumorchid ;
+    border-radius: 10px;
+}

@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
+import { Container } from 'react-bootstrap';
+
+import './addServices.css'
 
 const AddnewService = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -18,23 +21,30 @@ const AddnewService = () => {
 
 
     return (
-        <div>
-            <h1>Please add new Service</h1>
+        <Container>
+
+            <h1>Add Service</h1>
             <div className="add-service">
-                <h2>Please Add a Service</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("name", { required: true, maxLength: 40 })} placeholder="Name" />
+                    <br />
 
                     <input {...register("price")} placeholder="price" />
+                    <br />
                     <input {...register("img")} placeholder="image url" />
+                    <br />
                     <input {...register("Arrival Date")} placeholder="Arrival Date" />
+                    <br />
                     <input {...register("Departure Date")} placeholder="Departure Date" />
-                    <input type="submit" />
+
                     <br />
                     <textarea {...register("description")} placeholder="Description" />
+                    <br />
+                    <input className="submit-btn" type="submit" />
                 </form>
             </div>
-        </div>
+
+        </Container>
     );
 };
 

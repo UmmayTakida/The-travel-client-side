@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
+import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useAuth()
@@ -10,7 +11,7 @@ const Header = () => {
 
 
         <>
-            <Navbar className="p-4" bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
+            <Navbar className="p-4 navbar" variant="dark" sticky="top" collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Brand className="head-title" href="#home">The Travel</Navbar.Brand>
                     <Navbar.Toggle />
@@ -20,10 +21,11 @@ const Header = () => {
 
 
                         {user?.email ?
-                            <span>
-                                <Nav.Link as={Link} to="/addservice">Add New Services</Nav.Link>
+                            <span className="private-link">
+                                <button><Nav.Link as={Link} to="/addservice">Add New Services</Nav.Link></button>
 
-                                <Nav.Link as={Link} to="/appoinment">Appoinment</Nav.Link>
+                                <button><Nav.Link as={Link} to="/myorders">My order</Nav.Link></button>
+                                <button><Nav.Link as={Link} to="/allorder">Manage All orders</Nav.Link></button>
                                 <button onClick={logOut} variant="light">Logout</button>
                             </span>
                             :
@@ -31,7 +33,7 @@ const Header = () => {
 
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>}
                         <Navbar.Text>
-                            <a href="#login">{user?.displayName}</a>
+                            <a className="user-name" href="#login">{user?.displayName}</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
 

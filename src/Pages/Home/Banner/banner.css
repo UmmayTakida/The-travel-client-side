@@ -1,0 +1,10 @@
+.carousel h3{
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+}
+.carousel p{
+    color: blue;
+    font-weight: 800;
+    font-size: 30px;
+}

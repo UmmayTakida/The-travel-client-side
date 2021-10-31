@@ -16,6 +16,7 @@ const Service = ({ service }) => {
                             <p>{description.slice(0, 250)}</p>
                             <br />
                             <strong>Price:${price}</strong>
+                            <br />
                             {
                                 <Link to={`/placeorder/${_id}`}>
                                     <button className="btn btn-primary btn-lg">

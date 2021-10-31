@@ -1,0 +1,6 @@
+.add-service input,textarea{
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid mediumorchid ;
+    border-radius: 10px;
+}

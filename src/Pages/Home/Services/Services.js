@@ -6,7 +6,7 @@ import Service from '../Service/Service';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://serene-lowlands-88457.herokuapp.com/services')
+        fetch('https://serene-lowlands-88457.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

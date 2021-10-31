@@ -7,7 +7,7 @@ const Myorder = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/myorders')
+        fetch('https://serene-lowlands-88457.herokuapp.com/myorders')
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])

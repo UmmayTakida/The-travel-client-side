@@ -12,7 +12,7 @@ const PlaceOrder = () => {
     // const [singleService, setSingleService] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${id}`
+        const url = `https://serene-lowlands-88457.herokuapp.com/services/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setServiceDetails(data))

@@ -9,3 +9,10 @@
     border: 2px solid mediumorchid ;
     border-radius: 10px;
 }
+.order-container{
+    background-color: darkslateblue;
+    color: lightcyan;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}

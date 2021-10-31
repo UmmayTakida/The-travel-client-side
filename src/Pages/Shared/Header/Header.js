@@ -15,9 +15,9 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand className="head-title" href="#home">The Travel</Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end fs-4 fw-2 nav-link">
-                        <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
+                    <Navbar.Collapse className="justify-content-end fs-4 fw-2">
+                        <Nav.Link className="nav-link" as={HashLink} to="/home#home">Home</Nav.Link>
+                        <Nav.Link className="nav-link" as={HashLink} to="/home#services">Services</Nav.Link>
 
 
                         {user?.email ?
@@ -31,7 +31,7 @@ const Header = () => {
                             :
 
 
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+                            <Nav.Link className="nav-link" as={Link} to="/login">Login</Nav.Link>}
                         <Navbar.Text>
                             <a className="user-name" href="#login">{user?.displayName}</a>
                         </Navbar.Text>
